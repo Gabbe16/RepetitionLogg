@@ -25,12 +25,42 @@ public class Methods {
         int errors = 0;
         int listpos = 0;
         for(int i = 0; i < theList.size(); i++) {
-            theList.get(listpos);
+            String currentRow = theList.get(i);
+            if (currentRow.contains("ERROR")) {
+            errors++;
+            }
             listpos++;
         }
 
         return errors;
     }
+
+    public static ArrayList<String> getGitActivity(ArrayList<String> theList) {
+        ArrayList<String> GitList = new ArrayList<String>();
+        for (int i = 0; i< theList.size(); i++) {
+            String currentRow = theList.get(i);
+                if (currentRow.contains("INFO -                         github")) {
+                    System.out.println(currentRow);
+                }
+            }
+
+        return GitList;
+
+    }
+
+    public static ArrayList<String> GetErrorMessages(ArrayList<String> theList) {
+        ArrayList<String> ErrorMessageList = new ArrayList<String>();
+        for (int i = 0; i < theList.size(); i++) {
+            String currentRow = theList.get(i);
+
+
+        }
+
+
+        return theList;
+    }
+
+
 }
 
 
