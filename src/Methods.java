@@ -22,13 +22,14 @@ public class Methods {
     }
 
     public static int countErrors(ArrayList<String> theList) {
-        int amountOfErrors = 0;
-
+        int errors = 0;
+        int listpos = 0;
         for(int i = 0; i < theList.size(); i++) {
-
+            theList.get(listpos);
+            listpos++;
         }
 
-        return 0;
+        return errors;
     }
 }
 
